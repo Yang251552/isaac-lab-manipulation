@@ -35,8 +35,9 @@ engineering / lessons-learned artefact. The two are intended to be read as a pai
 
 ## Status
 
-- [x] Day 1 — `Isaac-Lift-Cube-Franka-v0`: trained 1500 iters in **24.2 min** on A10G, eval **100 % success @ 2 cm goal** over 256 rollouts × 2 seeds, on the randomized training distribution. ([details](docs/isaac-lift-cube-franka-v0.md), [wandb](https://wandb.ai/yangchenghan2515-eth-z-rich/franka-manipulation-rl/runs/kd4z3ral))
-  - Video: pending (blocked on EC2 g5.xlarge GL/livestream config)
+- [x] Day 1 — `Isaac-Lift-Cube-Franka-v0`: trained 1500 iters in **24.2 min** on A10G, eval **100 % success @ 2 cm goal** over 256 rollouts × 2 seeds, on the randomized training distribution. ([details](docs/isaac-lift-cube-franka-v0.md), [wandb](https://wandb.ai/yangchenghan2515-eth-z-rich/franka-manipulation-rl/runs/kd4z3ral), [mp4](results/videos/lift_cube_seed42.mp4))
+
+![Lift-Cube policy rollout — 16 parallel envs, 12 s @ 15 fps](results/videos/lift_cube_seed42.gif)
 
 ![Lift-Cube training curves](results/figures/lift_cube_seed42_curves.png)
 

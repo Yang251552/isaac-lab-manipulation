@@ -77,7 +77,7 @@ scp -i ~/.ssh/excavation-key.pem \
 | Checkpoint | `results/checkpoints/lift_cube_seed42_model_1499.pt` |
 | Saved configs | `configs/lift_cube/{agent,env}.yaml` |
 | Training curve | `results/figures/lift_cube_seed42_curves.png` |
-| Play-mode video | _pending — recording via Isaac Sim Livestream + QuickTime, blocked on EC2 GL stack on g5.xlarge_ |
+| Play-mode video | [`results/videos/lift_cube_seed42.mp4`](../results/videos/lift_cube_seed42.mp4) — 12 s, 1280×720, 16 envs running the Play config |
 
 ### Eval methodology
 

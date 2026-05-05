@@ -26,6 +26,7 @@ of truth for "how do we work on this project."
 - **IP changes** when EC2 stops/starts. If `ssh ubuntu@...` fails, ask user for the current IP and update this file.
 - **EBS disk**: extend to ≥100 GB before Isaac Lab install (Isaac Sim assets ~30 GB + cache). Currently 35 G used / 97 G total.
 - **Permissions** for ssh/scp pre-allowed in `.claude/settings.local.json`.
+- **GPU driver pre-requisite for video / offscreen rendering**: Isaac Sim 4.5's RTX renderer rejects driver 535.288.x because NVIDIA's Vulkan version encoding truncates `patch` to 8 bits — `535.288.01` is reported to Vulkan as `535.32.01`, fails the `>= 535.129` whitelist check. Headless training works fine on the rejected driver, but `play.py --video` and any DISPLAY-bound rendering will hang at MDL/TLAS init. Fix once: `sudo apt install -y nvidia-driver-550-server libglu1-mesa freeglut3-dev && sudo reboot`. (apt's metapackage often pulls in 580.x.y, which is also fine — the requirement is "patch < 256 in the kernel driver version".)
 
 ### 1.1 Launching Isaac Lab scripts — the only correct invocation
 
