@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# Virtual envs
+venv/
+.venv/
+env/
+
+# Logs / training artefacts
+logs/
+wandb/
+runs/
+*.log
+*.tfevents.*
+
+# Checkpoints (push only released ones via results/release/)
+results/checkpoints/
+!results/release/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Claude local settings (keep only the team-shared file in .claude/)
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
