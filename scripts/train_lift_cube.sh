@@ -9,7 +9,7 @@
 set -euo pipefail
 
 SEED="${1:-42}"
-HOST="ubuntu@16.171.208.250"
+HOST="ubuntu@16.171.182.227"
 KEY="$HOME/.ssh/excavation-key.pem"
 TS="$(date +%Y%m%d_%H%M%S)"
 REMOTE_LOG="/home/ubuntu/isaac-lab-manipulation/logs/lift_cube_seed${SEED}_${TS}.log"

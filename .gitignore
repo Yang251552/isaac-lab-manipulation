@@ -27,6 +27,5 @@ results/checkpoints/
 .vscode/
 *.swp
 
-# Claude local settings (keep only the team-shared file in .claude/)
-.claude/settings.local.json
-.claude/scheduled_tasks.lock
+# Claude local settings and notes
+.claude/

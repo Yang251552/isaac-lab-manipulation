@@ -7,7 +7,7 @@
 set -euo pipefail
 
 CKPT="${1:?usage: play_lift_cube.sh <checkpoint_path_on_ec2>}"
-HOST="ubuntu@16.171.208.250"
+HOST="ubuntu@16.171.182.227"
 KEY="$HOME/.ssh/excavation-key.pem"
 
 ssh -i "$KEY" "$HOST" "
