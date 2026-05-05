@@ -46,7 +46,7 @@ def main(tfevents: str, out_png: str):
         ax.set_xlabel("iteration")
         ax.grid(alpha=0.3)
 
-    fig.suptitle("Isaac-Lift-Cube-Franka-v0 — PPO training (seed 42, 1500 iters, A10G, 24.2 min)", fontsize=12)
+    fig.suptitle("Isaac-Lift-Cube-Franka-v0: PPO training (seed 42, 1500 iters, A10G, 24.2 min)", fontsize=12)
     Path(out_png).parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out_png, dpi=130)
     print(f"saved {out_png}")
