@@ -8,19 +8,32 @@ The goal is reproduction, not novelty. Trained policies should match the
 reference behaviour and success rates reported in Isaac Lab's official
 benchmarks, with no modifications to the official task configurations.
 
+This is **act 1** of a three-repository portfolio arc:
+
+| Repo | Role |
+|---|---|
+| this repo | act 1: reproduce a standard Isaac Lab manipulation baseline cleanly |
+| [`excavation-rl`](https://github.com/Yang251552/excavation-rl) | act 2: push into granular-media excavation with a custom substrate; did not converge, but produced a detailed failure diagnosis |
+| [`cluttered-lift`](https://github.com/Yang251552/cluttered-lift) | act 3: keep the granular-manipulation question, but move it back onto the Isaac Lab stack with a smaller rigid-body proxy |
+
+The checkpoint from this repo is reused directly in act 3 as the zero-shot and
+warm-start baseline. So this project is not only a standalone reproduction; it
+is also the controlled reference point for the later granular-manipulation
+diagnosis.
+
 ## Why this exists
 
 This is a structured reproduction project, not a tutorial run-through. Each
 task is reproduced under strict discipline: no reward shaping, no custom
 hyperparameters, no shipping at "looks reasonable" reward curves. A task
-counts as done only when the published benchmark's headline number is matched
-on the evaluation distribution.
+counts as done only when the reference success target is matched on the
+evaluation distribution.
 
 The intent is to demonstrate three things:
 
-1. Competence with the production-grade RL stack that current sim-to-real
-   groups use. Isaac Lab plus `rsl_rl` is the default for ETH RSL, NVIDIA, and
-   several Stanford / CMU manipulation labs.
+1. Competence with the production-style RL stack used in current robot-learning
+   work: Isaac Lab for scalable simulation, `rsl_rl` for PPO training, and
+   seed-replicated evaluation rather than reward-curve eyeballing.
 2. Precise reading of upstream code. See
    [`docs/isaac-lift-cube-franka-v0.md`](docs/isaac-lift-cube-franka-v0.md),
    "Eval methodology" section, for why the obvious "Play vs base config"
@@ -45,7 +58,7 @@ The intent is to demonstrate three things:
 
 ## Tech stack
 
-- Isaac Lab (Isaac Sim 4.x backend)
+- Isaac Lab / Isaac Sim
 - `rsl_rl` PPO
 - Wandb / TensorBoard logging
 - A10G GPU on EC2 g5.xlarge for training
