@@ -13,12 +13,14 @@ This is **act 1** of a three-repository portfolio arc:
 | Repo | Role |
 |---|---|
 | this repo | act 1: reproduce a standard Isaac Lab manipulation baseline cleanly |
-| [`excavation-rl`](https://github.com/Yang251552/excavation-rl) | act 2: push into granular-media excavation with a custom substrate; did not converge, but produced a detailed failure diagnosis |
-| [`cluttered-lift`](https://github.com/Yang251552/cluttered-lift) | act 3: keep the granular-manipulation question, but move it back onto the Isaac Lab stack with a smaller rigid-body proxy |
+| [`excavation-rl`](https://github.com/Yang251552/excavation-rl) | act 2: push into granular-media excavation on a self-built substrate; the engineering load consumed the research budget before the policy converged, but the failure mode is documented in detail |
+| [`cluttered-lift`](https://github.com/Yang251552/cluttered-lift) | act 3: same granular-manipulation question, pursued inside the Isaac Lab stack with a small rigid-body proxy — act 2's lesson applied with a calibrated engineering budget |
 
-The checkpoint from this repo is reused directly in act 3 as the zero-shot and
-warm-start baseline. So this project is not only a standalone reproduction; it
-is also the controlled reference point for the later granular-manipulation
+The arc is "standard reproduction → self-built attempt at the harder research
+interest → same research interest brought back inside the production stack",
+and the checkpoint from this repo is reused directly in act 3 as the zero-shot
+and warm-start baseline. So this project is not only a standalone reproduction;
+it is also the controlled reference point for the later granular-manipulation
 diagnosis.
 
 ## Why this exists
